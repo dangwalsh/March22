@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Fraction.h"
 
 #import "March22AppDelegate.h"
 
@@ -15,15 +14,15 @@ int main(int argc, char *argv[])
 {
     @autoreleasepool {
         
-        Fraction *thisFraction;
+        int i = 10;
+        NSLog(@"The value of i is %d.", i);
         
-        thisFraction  = [[Fraction alloc] init];
+        CGFloat f = 3.14159;
+        NSLog(@"The value of f is %g.", f);
         
-        [thisFraction setNumerator:3];
-        [thisFraction setDenominator:4];
-        
-        NSLog(@"The value of this fraction is:");
-        [thisFraction print];
+        UIDevice *device = [UIDevice currentDevice];
+        NSString *version = device.systemVersion;
+        NSLog(@"Version of iOS: %@", version);	//Output an NString with %@.
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([March22AppDelegate class]));
     }
